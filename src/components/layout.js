@@ -5,12 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Header from "./header"
-import "./layout.css"
+import { ThemeProvider, createMuiTheme } from "@material-ui/core";
+
+import Header from "./header";
+import "./layout.css";
+import { blue, lightBlue } from "@material-ui/core/colors";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,10 +24,16 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
+
+  const theme = createMuiTheme({
+    palette: {
+      primary: blue,
+    },
+  });
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -34,18 +43,13 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
-    </>
-  )
-}
+    </ThemeProvider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
