@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { ThemeProvider, createMuiTheme } from "@material-ui/core";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Header from "./header";
 import "./layout.css";
@@ -26,11 +27,18 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const theme = createMuiTheme({
-    palette: {
-      primary: blue,
-    },
-  });
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          primary: blue,
+          type: prefersDarkMode ? "dark" : "light",
+        },
+      }),
+    [prefersDarkMode],
+  );
 
   return (
     <ThemeProvider theme={theme}>

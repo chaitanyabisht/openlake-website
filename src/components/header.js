@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      <AppBar position="static" color="inherit">
+      <AppBar position="static" color="default">
         <Toolbar>
           <IconButton
             edge="start"
