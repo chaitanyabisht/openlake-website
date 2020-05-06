@@ -13,7 +13,7 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 
 import Header from "./header";
 import "./layout.css";
-import { blue, lightBlue } from "@material-ui/core/colors";
+import { blue } from "@material-ui/core/colors";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

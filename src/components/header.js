@@ -2,15 +2,11 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
+
+import ButtonLink from "../components/ButtonLink";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +40,9 @@ const Header = ({ siteTitle }) => {
               {siteTitle}
             </Link>
           </Typography>
-          <Button color="inherit">About</Button>
+          <ButtonLink to="/projects">projects</ButtonLink>
+          <ButtonLink to="/community">community</ButtonLink>
+          <ButtonLink to="/about">about</ButtonLink>
         </Toolbar>
       </AppBar>
     </header>
