@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
-import Container from "@material-ui/core/Container";
+import { Container, Typography } from "@material-ui/core";
 
 const IndexPage = () => (
   <Layout>
@@ -20,44 +20,41 @@ const IndexPage = () => (
         padding: "50px",
       }}
     >
-      <h1>Welcome to Open Lake</h1>
+      <Typography variant="h2">Welcome to Open Lake</Typography>
     </div>
 
-    <Container maxWidth="lg">
-      <h1>Everyone Benefits</h1>
-      <p>
+    <Container maxWidth="lg" style={{ padding: "3rem" }}>
+      <Typography variant="h3" gutterBottom>
+        Everyone Benefits
+      </Typography>
+
+      <Typography paragraph>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, ex
         unde veniam fugiat deleniti iusto, perferendis voluptatibus laborum
         optio totam ad? Minima architecto reprehenderit rerum autem fugiat unde
         eum dicta!
-      </p>
-      <div
-        className="images"
-        style={{ display: "flex", flexFlow: "row nowrap" }}
-      >
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
-          veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
-          sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
-          repellendus laborum?
-        </p>
+      </Typography>
 
-        <p>
+      <div style={{ display: "flex", flexFlow: "row nowrap" }}>
+        <Typography paragraph>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
           veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
           sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
           repellendus laborum?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
-          veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
-          sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
-          repellendus laborum?
-        </p>
+        </Typography>
 
-        {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
+        <Typography paragraph>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+          veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
+          sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
+          repellendus laborum?
+        </Typography>
+        <Typography paragraph>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+          veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
+          sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
+          repellendus laborum?
+        </Typography>
       </div>
     </Container>
 
@@ -70,12 +67,15 @@ const IndexPage = () => (
         color: "#444",
       }}
     >
-      <h1>2,000 Projects and counting</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        rem id labore inventore, deserunt autem, ab expedita odio delectus ullam
-        recusandae in eveniet eius at architecto vero esse! Modi, quisquam.
-      </p>
+      <Typography variant="h3" gutterBottom>
+        2,000 Projects and counting
+      </Typography>
+      <Typography paragraph>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+        veritatis quos omnis, soluta reiciendis aliquid, in nostrum asperiores
+        sint ad nesciunt tempora cumque itaque sed reprehenderit libero id,
+        repellendus laborum?
+      </Typography>
     </div>
   </Layout>
 );
