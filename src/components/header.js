@@ -40,9 +40,9 @@ const Header = ({ siteTitle }) => {
               {siteTitle}
             </Link>
           </Typography>
-          <ButtonLink to="/projects">projects</ButtonLink>
-          <ButtonLink to="/community">community</ButtonLink>
-          <ButtonLink to="/about">about</ButtonLink>
+          <ButtonLink to="/projects/">projects</ButtonLink>
+          <ButtonLink to="/community/">community</ButtonLink>
+          <ButtonLink to="/about/">about</ButtonLink>
         </Toolbar>
       </AppBar>
     </header>
