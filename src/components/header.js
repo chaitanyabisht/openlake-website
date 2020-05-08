@@ -8,9 +8,9 @@ import {
   IconButton,
   Typography,
   Hidden,
+  makeStyles,
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
 
 import ButtonLink from "../components/ButtonLink";
 
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="inherit">
         <Toolbar>
           <Hidden mdUp implementation="css">
             <IconButton
