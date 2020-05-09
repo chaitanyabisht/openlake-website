@@ -54,18 +54,16 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
 
-      <AppBar position="static" color="default">
-        <Toolbar>
-          <h3>Open Lake</h3>
-          <div style={{ textAlign: "right" }}>
-            <Button edge="end" href="#">
-              Button
-            </Button>
-            <Button href="#">Button</Button>
-            <Button href="#">Button</Button>
-          </div>
-        </Toolbar>
-      </AppBar>
+      <div style={{display: "flex", flexDirection: "row", backgroundColor : "#444" , color : "white"}}>
+        <h3>Open Lake</h3>
+        <div style={{display : "inherit"}}>
+          <Button edge="end" href="#">
+            Button
+          </Button>
+          <Button href="#">Button</Button>
+          <Button href="#">Button</Button>
+        </div>
+      </div>
     </ThemeProvider>
   );
 };
