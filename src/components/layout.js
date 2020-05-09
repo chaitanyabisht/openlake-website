@@ -9,13 +9,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { ThemeProvider, createMuiTheme } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import {
+  ThemeProvider,
+  createMuiTheme,
+  CssBaseline,
+  useMediaQuery,
+  Toolbar,
+  AppBar,
+  Button,
+} from "@material-ui/core";
+import { blue } from "@material-ui/core/colors";
 
 import Header from "./header";
 import "./layout.css";
-import { blue } from "@material-ui/core/colors";
-import { Toolbar, AppBar, Button } from "@material-ui/core";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -43,6 +49,7 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <div
