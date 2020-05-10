@@ -51,7 +51,6 @@ const Header = ({ siteTitle }) => {
           <Hidden smDown implementation="css">
             <ButtonLink to="/projects/">projects</ButtonLink>
             <ButtonLink to="/community/">community</ButtonLink>
-            <ButtonLink to="/about/">about</ButtonLink>
           </Hidden>
         </Toolbar>
       </AppBar>

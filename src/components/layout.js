@@ -17,8 +17,8 @@ import {
   Toolbar,
   AppBar,
   Button,
+  colors,
 } from "@material-ui/core";
-import { blue } from "@material-ui/core/colors";
 
 import Header from "./header";
 import "./layout.css";
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
     () =>
       createMuiTheme({
         palette: {
-          primary: blue,
+          primary: colors.blue,
           type: prefersDarkMode ? "dark" : "light",
         },
       }),
