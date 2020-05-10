@@ -5,7 +5,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-
+        Link: "",
     },
     {
         Student: "xyz",
@@ -13,7 +13,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     },
     {
         Student: "xyz",
@@ -21,7 +21,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     },
     {
         Student: "xyz",
@@ -29,7 +29,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     },
     {
         Student: "xyz",
@@ -37,7 +37,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-
+        Link: "",
     },
     {
         Student: "xyz",
@@ -45,7 +45,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     },
     {
         Student: "xyz",
@@ -53,7 +53,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     },
     {
         Student: "xyz",
@@ -61,7 +61,7 @@ const projects = [
         Name: "Project",
         Issues: 5,
         Description: "Lorem, ipsum, dolor,amelit, sed do, incididu, Aliquam,",
-        
+    Link: "",        
     }
 ];
 

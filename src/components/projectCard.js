@@ -27,9 +27,9 @@ const useStyles = makeStyles({
   bottom: {
     marginBottom: 12,
     fontSize: 14,
+    width: 70,
   },
   top: {
-    height: 100,
     backgroundImage: `url(${projectcard})`,
     color: Black,
     backgroundSize: "100 hidden",
@@ -37,7 +37,6 @@ const useStyles = makeStyles({
   },
   middle: {
     padding: 10,
-    height: 120,
   },
 });
 
@@ -45,35 +44,55 @@ export default function ProjectCard(x) {
   const cardclasses = useStyles();
 
   return (
-    <Grid container direction="column" item xs={12} sm={6} spacing={3}>
+    <Grid container direction="column" item lg={4} >
       <Card className={cardclasses.root}>
         <CardActionArea>
           <Grid
             container
             direction="row"
             justify="flex-start"
-            alignItems="center"
+            alignItems="flex-start"
             className={cardclasses.top}
+            
           >
             <Typography gutterBottom variant="h5" component="h2">
               {x.Name}
             </Typography>
           </Grid>
           <CardContent className={cardclasses.middle}>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Description: {x.Description} <br />
-              Tech Stack: {x.Description}
-            </Typography>
-            <Typography variant="h6" color="textSecondary" component="p">
-              Wanna work on this project? <br />
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Contact: {x.Student} {x.Contact}
-            </Typography>
+            <Grid
+              container
+              direction="column"
+              justify="flex-start"
+              // alignItems="flex-start"
+              wrap="nowrap"
+              spacing={1}
+              >
+                < Grid item >
+                  <Typography variant="body2" color="textSecondary" component="p" >
+                    Description: {x.Description} 
+                  </Typography>
+                </Grid>
+                < Grid item>
+                  <Typography variant="body2" color="textSecondary" component="p" >
+                    Tech Stack: {x.Description} 
+                  </Typography>
+                </Grid>
+                < Grid item>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Wanna work on this project? 
+                  </Typography>
+                </Grid>
+                < Grid item>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Contact: {x.Student} {x.Contact}
+                  </Typography>
+                </Grid>
+            </Grid>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" href={x.Link}>
             Learn More
           </Button>
         </CardActions>

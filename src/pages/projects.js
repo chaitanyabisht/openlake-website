@@ -3,19 +3,24 @@ import { makeStyles } from "@material-ui/core/styles";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ProjectCard from "../components/projectCard";
-import { ProjectForm } from "../components/projectForms";
 import projects from "../components/details_projects";
-import { White, Black, BlueWhite } from "../components/colors";
 import { Grid, Box, Typography } from "@material-ui/core";
+import SimpleExpansionPanel from "../components/projectForms";
 
 const useStyles = makeStyles({
   root: {
     margin: 0,
   },
   title: {
-    // backgroundImage: `url(${projectcard})`,
+    padding: 5,
+    marginBottom: 10,
+  },
+  titleGrid: {
     height: 300,
-    padding: 30,
+    padding: 40
+  },
+  subTitle: {
+    padding:5,
     marginBottom: 10,
   },
   form: {
@@ -32,25 +37,30 @@ export default function Projects() {
       <Grid className={classes.root}>
         <Grid
           container
-          direction="row"
-          justify="flex-start"
-          alignItems="center"
-          className={classes.title}
+          direction="column"
+          justify="center"
+          alignItems="flex-start"
+          className={classes.titleGrid}
         >
-          <Box>
+          <Box className={classes.title}>
             <Typography variant="h2" component="h2">
-              Projects and Community <br />
+              Projects  <br />
+            </Typography>
+            </Box>
+            <Box className={classes.subTitle}>
+            <Typography variant="h6" component="h2">
+              Connect. Contribute. Build.   <br />
             </Typography>
           </Box>
         </Grid>
-        {/* <ProjectForm/> */}
+        <SimpleExpansionPanel/>
         {/* <SimpleTabs/> */}
         {/* <Searchbar/>  */}
         <Grid
           spacing={1}
           container
           direction="row"
-          justify="space-evenly"
+          justify="flex-start"
           alignItems="center"
         >
           {projects.map(x => ProjectCard(x))}
