@@ -5,23 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import {
-  ThemeProvider,
-  createMuiTheme,
-  CssBaseline,
-  useMediaQuery,
-  Toolbar,
-  AppBar,
-  Button,
-} from "@material-ui/core";
-import { blue } from "@material-ui/core/colors";
+import { Toolbar, AppBar, Button } from '@material-ui/core';
 
-import Header from "./header";
-import "./layout.css";
+import Header from './header';
+import './layout.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,28 +25,15 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-
-  const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          primary: blue,
-          type: prefersDarkMode ? "dark" : "light",
-        },
-      }),
-    [prefersDarkMode],
-  );
-
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
+      {/* <CssBaseline /> */}
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <div
         style={{
           margin: `0 auto`,
-          textAlign: "center",
+          textAlign: 'center',
         }}
       >
         <main>{children}</main>
@@ -71,7 +49,7 @@ const Layout = ({ children }) => {
           <Button href="#">Button</Button>
         </div>
       </div>
-    </ThemeProvider>
+      </>
   );
 };
 
