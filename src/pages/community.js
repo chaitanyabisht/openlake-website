@@ -12,13 +12,22 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 
 import { Star } from '@material-ui/icons';
-import { useTheme, Typography, Container } from '@material-ui/core';
+import { useTheme, Typography, Container, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  timelineCustom: {
+    '&::before': {
+      background: theme.palette.text.primary,
+    },
+  },
+}));
 
 const lorem =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 const CommunityPage = () => {
   const { palette, shadows } = useTheme();
+  const classes = useStyles();
 
   return (
     <Layout>
@@ -29,7 +38,7 @@ const CommunityPage = () => {
           Community
         </Typography>
 
-        <VerticalTimeline>
+        <VerticalTimeline className={classes.timelineCustom}>
           <TimeLineItem
             orgName="DBpedia"
             contributor="Anand PanchBhai"
@@ -52,6 +61,7 @@ const CommunityPage = () => {
             iconStyle={{
               background: palette.primary[palette.type],
               color: '#fff',
+              boxShadow: shadows[2],
             }}
             icon={<Star />}
           />

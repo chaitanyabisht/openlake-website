@@ -21,7 +21,11 @@ const TimeLineItem = ({ orgName, contributor, content, date }) => {
         boxShadow: shadows[2],
       }}
       date={date}
-      iconStyle={{ background: palette.primary[palette.type], color: '#fff' }}
+      iconStyle={{
+        background: palette.primary[palette.type],
+        color: '#fff',
+        boxShadow: shadows[2],
+      }}
       icon={<Code />}
     >
       <Typography variant="h6" className="vertical-timeline-element-title">

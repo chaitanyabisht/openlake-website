@@ -39,11 +39,9 @@ const Layout = ({ children }) => {
           padding: '0 24px',
         }}
       >
-        <h3>{data.site.siteMetadata.title}</h3>
+        <h3 style={{ flex: 1 }}>{data.site.siteMetadata.title}</h3>
         <div style={{ display: 'inherit' }}>
-          <Button edge="end" href="#">
-            Button
-          </Button>
+          <Button href="#">Button</Button>
           <Button href="#">Button</Button>
           <Button href="#">Button</Button>
         </div>
