@@ -27,17 +27,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <CssBaseline /> */}
       <Header siteTitle={data.site.siteMetadata.title} />
 
-      <div
-        style={{
-          margin: `0 auto`,
-          textAlign: 'center',
-        }}
-      >
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
 
       <AppBar position="static" color="default">
         <Toolbar>
