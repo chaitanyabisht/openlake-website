@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import {
   AppBar,
@@ -9,10 +9,11 @@ import {
   Typography,
   Hidden,
   makeStyles,
-} from "@material-ui/core";
-import { Menu as MenuIcon } from "@material-ui/icons";
+} from '@material-ui/core';
+import { Menu as MenuIcon } from '@material-ui/icons';
 
-import ButtonLink from "../components/ButtonLink";
+import ButtonLink from '../components/ButtonLink';
+import DarkModeToggle from './DarkModeToggle';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,10 +45,11 @@ const Header = ({ siteTitle }) => {
             </IconButton>
           </Hidden>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/" style={{ color: "currentColor" }}>
+            <Link to="/" style={{ color: 'currentColor' }}>
               {siteTitle}
             </Link>
           </Typography>
+          <DarkModeToggle />
           <Hidden smDown implementation="css">
             <ButtonLink to="/projects/">projects</ButtonLink>
             <ButtonLink to="/community/">community</ButtonLink>
