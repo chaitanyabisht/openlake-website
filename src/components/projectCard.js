@@ -7,14 +7,10 @@ import {
   CardContent,
   Button,
   Typography,
-  Box,
   CardActionArea,
-  CardMedia,
-  url,
-  Tooltip,
 } from "@material-ui/core";
-import { Gold, DarkBlue, Blue, Orange, White, Black } from "./colors";
-import projectcard from "../images/projectcard.jpg";
+import projectcard from "../images/projectbg.jpg";
+import ThumbUp from '@material-ui/icons/ThumbUp';
 
 const useStyles = makeStyles({
   root: {
@@ -31,12 +27,12 @@ const useStyles = makeStyles({
   },
   top: {
     backgroundImage: `url(${projectcard})`,
-    color: Black,
     backgroundSize: "100 hidden",
     padding: 20,
   },
   middle: {
     padding: 10,
+    height: 200,
   },
 });
 
@@ -45,7 +41,7 @@ export default function ProjectCard(x) {
 
   return (
     <Grid container direction="column" item lg={4} >
-      <Card className={cardclasses.root}>
+      <Card className={cardclasses.root} >
         <CardActionArea>
           <Grid
             container
@@ -65,7 +61,7 @@ export default function ProjectCard(x) {
               direction="column"
               justify="flex-start"
               // alignItems="flex-start"
-              wrap="nowrap"
+              // wrap="nowrap"
               spacing={1}
               >
                 < Grid item >
@@ -75,26 +71,35 @@ export default function ProjectCard(x) {
                 </Grid>
                 < Grid item>
                   <Typography variant="body2" color="textSecondary" component="p" >
-                    Tech Stack: {x.Description} 
+                    Tech Stack: {x.TechStack} 
                   </Typography>
                 </Grid>
                 < Grid item>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Wanna work on this project? 
+                    Wanna know more about the project? 
                   </Typography>
                 </Grid>
                 < Grid item>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Contact: {x.Student} {x.Contact}
+                    Contact: {x.StudentsContact}
                   </Typography>
                 </Grid>
             </Grid>
           </CardContent>
         </CardActionArea>
         <CardActions>
+          <Grid
+          container
+          direction="row"
+          justify="space-between"
+          >
           <Button size="small" color="primary" href={x.Link}>
             Learn More
           </Button>
+          <Button size="small" color="primary" >
+         {<ThumbUp />}
+          </Button>
+          </Grid>
         </CardActions>
       </Card>
     </Grid>
