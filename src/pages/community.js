@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -13,6 +12,8 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { Star } from '@material-ui/icons';
 import { useTheme, Typography, Container, makeStyles } from '@material-ui/core';
+
+import timelineData from '../../content/timeline.yaml';
 
 const useStyles = makeStyles(theme => ({
   timelineCustom: {
@@ -39,24 +40,9 @@ const CommunityPage = () => {
         </Typography>
 
         <VerticalTimeline className={classes.timelineCustom}>
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
+          {timelineData.map(data => (
+            <TimeLineItem {...data} />
+          ))}
           <VerticalTimelineElement
             iconStyle={{
               background: palette.primary[palette.type],
