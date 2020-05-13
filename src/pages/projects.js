@@ -44,7 +44,7 @@ export default function Projects() {
         >
           <Box className={classes.title}>
             <Typography variant="h2" component="h2">
-              Projects  <br />
+              Projects
             </Typography>
             </Box>
             <Box className={classes.subTitle}>

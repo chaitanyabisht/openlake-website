@@ -6,6 +6,11 @@ import SEO from '../components/seo';
 import { Container, Typography, Paper, makeStyles } from '@material-ui/core';
 // import heroBackground from '../images/cool-blue-background.svg';
 // import waterBackground from '../images/water.jpeg';
+import svgwaves from '../images/wave.svg';  
+import svgwavesTop from '../images/wave-top.svg';
+import bubble from '../images/bubble.svg';
+import svgwavesNight from '../images/wave-night.svg';  
+
 
 const useStyles = makeStyles({
   centerText: {
@@ -19,7 +24,18 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
+      <div
+      //  url(${svgwavesTop}),
+      style= {{
+        backgroundImage: `
+        url(${svgwaves})
+        `,
+        // backgroundSize: "cover",
+        backgroundSize : "auto",
+        backgroundPosition: "40% 40%",
+        backgroundAttachment : "scroll",
+        backgroundRepeat : "no-repeat"
+      }}>
         {/* 
           background:
             '-webkit-radial-gradient(rgb(163, 211, 254), rgb(0, 127, 254))',
@@ -45,8 +61,10 @@ export default function IndexPage() {
           </Typography>
         </div>
 
-        <Paper className={classes.centerText} elevation={0}>
-          <Container maxWidth="lg" style={{ padding: '3rem' }}>
+        <Paper className={classes.centerText} elevation={0} style={{
+            background: "#0090dd" , color: "#ffffff"}}>
+              {/* #0090dd , #0067ab,#00426e*/}
+          <Container maxWidth="lg" style={{ padding: '3rem'}}>
             <Typography variant="h4" gutterBottom>
               What is OpenLake
             </Typography>
