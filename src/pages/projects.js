@@ -53,6 +53,7 @@ export default function Projects() {
             </Typography>
           </Box>
         </Grid>
+        <br/>
         {/* <Container>
         <SimpleExpansionPanel/>
         </Container> */}
