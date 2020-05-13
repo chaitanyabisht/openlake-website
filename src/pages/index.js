@@ -6,11 +6,10 @@ import SEO from '../components/seo';
 import { Container, Typography, Paper, makeStyles } from '@material-ui/core';
 // import heroBackground from '../images/cool-blue-background.svg';
 // import waterBackground from '../images/water.jpeg';
-import svgwaves from '../images/wave.svg';  
+import svgwaves from '../images/wave.svg';
 import svgwavesTop from '../images/wave-top.svg';
 import bubble from '../images/bubble.svg';
-import svgwavesNight from '../images/wave-night.svg';  
-
+import svgwavesNight from '../images/wave-night.svg';
 
 const useStyles = makeStyles({
   centerText: {
@@ -25,17 +24,18 @@ export default function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <div
-      //  url(${svgwavesTop}),
-      style= {{
-        backgroundImage: `
+        //  url(${svgwavesTop}),
+        style={{
+          backgroundImage: `
         url(${svgwaves})
         `,
-        // backgroundSize: "cover",
-        backgroundSize : "auto",
-        backgroundPosition: "40% 40%",
-        backgroundAttachment : "scroll",
-        backgroundRepeat : "no-repeat"
-      }}>
+          // backgroundSize: "cover",
+          backgroundSize: 'auto',
+          backgroundPosition: '40% 40%',
+          backgroundAttachment: 'scroll',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         {/* 
           background:
             '-webkit-radial-gradient(rgb(163, 211, 254), rgb(0, 127, 254))',
@@ -61,10 +61,16 @@ export default function IndexPage() {
           </Typography>
         </div>
 
-        <Paper className={classes.centerText} elevation={0} style={{
-            background: "#0090dd" , color: "#ffffff"}}>
-              {/* #0090dd , #0067ab,#00426e*/}
-          <Container maxWidth="lg" style={{ padding: '3rem'}}>
+        <Paper
+          className={classes.centerText}
+          elevation={0}
+          style={{
+            background: '#0090dd',
+            color: '#ffffff',
+          }}
+        >
+          {/* #0090dd , #0067ab,#00426e*/}
+          <Container maxWidth="lg" style={{ padding: '3rem' }}>
             <Typography variant="h4" gutterBottom>
               What is OpenLake
             </Typography>
@@ -98,13 +104,19 @@ export default function IndexPage() {
             </Typography>
 
             <Typography paragraph>
-            This independent entity will be a place to have discussions on open source communities. The entity will encourage and help students to become a part of open source initiatives like Google Summer of Code, Outreachy etc.
-
+              This independent entity will be a place to have discussions on
+              open source communities. The entity will encourage and help
+              students to become a part of open source initiatives like Google
+              Summer of Code, Outreachy etc.
             </Typography>
 
             <Typography paragraph>
-At a later stage, the students who have worked in open source organisations may encourage other students to join them. Ensuring a steady flow of human resources to these communities.
-There will be fairs where students can talk about the work they did for the FOSS (Free Open Source Software) communities and add more people to the organisations they are part of.
+              At a later stage, the students who have worked in open source
+              organisations may encourage other students to join them. Ensuring
+              a steady flow of human resources to these communities. There will
+              be fairs where students can talk about the work they did for the
+              FOSS (Free Open Source Software) communities and add more people
+              to the organisations they are part of.
             </Typography>
 
             <Typography variant="h5" gutterBottom>
@@ -112,7 +124,11 @@ There will be fairs where students can talk about the work they did for the FOSS
             </Typography>
 
             <Typography paragraph>
-            There will be a set of individuals who will act as mentors and ensure that the events related to OpenLake happen periodically. Currently, individuals who have had their pull requests merged into reputed Open Source Organisation will be eligible to be mentors.
+              There will be a set of individuals who will act as mentors and
+              ensure that the events related to OpenLake happen periodically.
+              Currently, individuals who have had their pull requests merged
+              into reputed Open Source Organisation will be eligible to be
+              mentors.
             </Typography>
 
             <div style={{ display: 'flex', flexFlow: 'row nowrap' }}>
