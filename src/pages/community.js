@@ -45,7 +45,10 @@ const CommunityPage = () => {
 
         <VerticalTimeline className={classes.timelineCustom}>
           {timelineData.map(data => (
-            <TimeLineItem {...data} />
+            <TimeLineItem
+              key={`${data.org}/${data.contributor}/${data.date}`}
+              {...data}
+            />
           ))}
 
           <VerticalTimelineElement icon={<Star />} />

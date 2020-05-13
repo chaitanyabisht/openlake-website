@@ -44,7 +44,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={formClasses.heading}>Are you working on a project too? We'd love to know more!</Typography>
+          <Typography className={formClasses.heading}>Working on an open source project ? We'd love to know more !</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
             <Grid

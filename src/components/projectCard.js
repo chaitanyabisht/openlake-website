@@ -10,7 +10,6 @@ import {
   CardActionArea,
 } from "@material-ui/core";
 import projectcard from "../images/projectbg.jpg";
-import ThumbUp from '@material-ui/icons/ThumbUp';
 
 const useStyles = makeStyles({
   root: {
@@ -97,7 +96,6 @@ export default function ProjectCard(x) {
             Learn More
           </Button>
           <Button size="small" color="primary" >
-         {<ThumbUp />}
           </Button>
           </Grid>
         </CardActions>

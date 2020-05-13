@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 
 function ButtonLink({ to, children }) {
   return (
-    <Link to={to} style={{ color: 'currentColor' }}>
+    <Link to={to}>
       <Button color="inherit">{children}</Button>
     </Link>
   );
