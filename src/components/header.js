@@ -40,6 +40,7 @@ const Header = ({ siteTitle }) => {
 
           <DarkModeToggle />
           <Hidden smDown implementation="css">
+            <ButtonLink to="/">Home</ButtonLink>
             <ButtonLink to="/projects">projects</ButtonLink>
             <ButtonLink to="/community">community</ButtonLink>
           </Hidden>

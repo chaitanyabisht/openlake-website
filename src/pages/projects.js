@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ProjectCard from "../components/projectCard";
 import projects from "../components/details_projects";
-import { Grid, Box, Typography } from "@material-ui/core";
+import { Grid, Box, Typography, Container } from "@material-ui/core";
 import SimpleExpansionPanel from "../components/projectForms";
 
 const useStyles = makeStyles({
@@ -49,11 +49,13 @@ export default function Projects() {
             </Box>
             <Box className={classes.subTitle}>
             <Typography variant="h6" component="h2">
-              Connect. Contribute. Build.   <br />
+              Connect. Contribute. Build.
             </Typography>
           </Box>
         </Grid>
+        <Container>
         <SimpleExpansionPanel/>
+        </Container>
         {/* <SimpleTabs/> */}
         {/* <Searchbar/>  */}
         <Grid
