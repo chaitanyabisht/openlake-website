@@ -53,9 +53,9 @@ export default function Projects() {
             </Typography>
           </Box>
         </Grid>
-        <Container>
+        {/* <Container>
         <SimpleExpansionPanel/>
-        </Container>
+        </Container> */}
         {/* <SimpleTabs/> */}
         {/* <Searchbar/>  */}
         <Grid
@@ -68,6 +68,7 @@ export default function Projects() {
           {projects.map(x => ProjectCard(x))}
         </Grid>
       </Grid>
+
     </Layout>
   );
 }
