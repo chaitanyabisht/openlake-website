@@ -31,7 +31,7 @@ export default function IndexPage() {
         `,
           // backgroundSize: "cover",
           backgroundSize: 'auto',
-          backgroundPosition: '40% 40%',
+          backgroundPosition: '35% 35%',
           backgroundAttachment: 'scroll',
           backgroundRepeat: 'no-repeat',
         }}
