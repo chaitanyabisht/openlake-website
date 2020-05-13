@@ -28,25 +28,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <main>{children}</main>
-<<<<<<< HEAD
-
-      {/* <Paper
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          padding: '0 24px',
-        }}
-      >
-        <h3 style={{ flex: 1 }}>{data.site.siteMetadata.title}</h3>
-        <div style={{ display: 'inherit' }}>
-          <Button href="#">Button</Button>
-          <Button href="#">Button</Button>
-          <Button href="#">Button</Button>
-        </div>
-      </Paper> */}
-=======
->>>>>>> 62c0eeaee4a6da073e538c321795ca5eac2f9b10
     </>
   );
 };
