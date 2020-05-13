@@ -1,16 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Button } from "@material-ui/core";
-import { Link } from "gatsby";
+import { Button } from '@material-ui/core';
+import { Link } from 'gatsby';
 
 function ButtonLink({ to, children }) {
   return (
-    <Button color="inherit">
-      <Link to={to} style={{ color: "currentColor" }}>
-        {children}
-      </Link>
-    </Button>
+    <Link to={to}>
+      <Button color="inherit">{children}</Button>
+    </Link>
   );
 }
 

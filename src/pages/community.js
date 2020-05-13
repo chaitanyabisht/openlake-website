@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -12,21 +11,27 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 
 import { Star } from '@material-ui/icons';
-import { useTheme, Typography, Container, makeStyles } from '@material-ui/core';
+import { Typography, Container, makeStyles } from '@material-ui/core';
+
+import timelineData from '../../content/timeline.yaml';
 
 const useStyles = makeStyles(theme => ({
   timelineCustom: {
     '&::before': {
       background: theme.palette.text.primary,
     },
+    '& .vertical-timeline-element-icon': {
+      background:
+        theme.palette.primary[
+          theme.palette.type === 'light' ? 'dark' : 'light'
+        ],
+      color: theme.palette.background.default,
+      boxShadow: theme.shadows[2],
+    },
   },
 }));
 
-const lorem =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-
 const CommunityPage = () => {
-  const { palette, shadows } = useTheme();
   const classes = useStyles();
 
   return (
@@ -39,32 +44,14 @@ const CommunityPage = () => {
         </Typography>
 
         <VerticalTimeline className={classes.timelineCustom}>
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
-          <TimeLineItem
-            orgName="DBpedia"
-            contributor="Anand PanchBhai"
-            content={lorem}
-            date="2019"
-          />
-          <VerticalTimelineElement
-            iconStyle={{
-              background: palette.primary[palette.type],
-              color: '#fff',
-              boxShadow: shadows[2],
-            }}
-            icon={<Star />}
-          />
+          {timelineData.map(data => (
+            <TimeLineItem
+              key={`${data.org}/${data.contributor}/${data.date}`}
+              {...data}
+            />
+          ))}
+
+          <VerticalTimelineElement icon={<Star />} />
         </VerticalTimeline>
       </Container>
     </Layout>

@@ -9,8 +9,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Button, Paper } from '@material-ui/core';
-
 import Header from './header';
 import './layout.css';
 
@@ -30,6 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <main>{children}</main>
+<<<<<<< HEAD
 
       {/* <Paper
         style={{
@@ -46,6 +45,8 @@ const Layout = ({ children }) => {
           <Button href="#">Button</Button>
         </div>
       </Paper> */}
+=======
+>>>>>>> 62c0eeaee4a6da073e538c321795ca5eac2f9b10
     </>
   );
 };
