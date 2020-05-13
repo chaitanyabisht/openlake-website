@@ -93,6 +93,28 @@ export default function IndexPage() {
               bridge between Students and the World of Open Source Development.
             </Typography>
 
+            <Typography variant="h5" gutterBottom>
+              Functioning
+            </Typography>
+
+            <Typography paragraph>
+            This independent entity will be a place to have discussions on open source communities. The entity will encourage and help students to become a part of open source initiatives like Google Summer of Code, Outreachy etc.
+
+            </Typography>
+
+            <Typography paragraph>
+At a later stage, the students who have worked in open source organisations may encourage other students to join them. Ensuring a steady flow of human resources to these communities.
+There will be fairs where students can talk about the work they did for the FOSS (Free Open Source Software) communities and add more people to the organisations they are part of.
+            </Typography>
+
+            <Typography variant="h5" gutterBottom>
+              Structure
+            </Typography>
+
+            <Typography paragraph>
+            There will be a set of individuals who will act as mentors and ensure that the events related to OpenLake happen periodically. Currently, individuals who have had their pull requests merged into reputed Open Source Organisation will be eligible to be mentors.
+            </Typography>
+
             <div style={{ display: 'flex', flexFlow: 'row nowrap' }}>
               {/* <Typography paragraph>
             
