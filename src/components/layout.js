@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
 
       <main>{children}</main>
 
-      <Paper
+      {/* <Paper
         style={{
           display: 'flex',
           flexDirection: 'row',
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
           <Button href="#">Button</Button>
           <Button href="#">Button</Button>
         </div>
-      </Paper>
+      </Paper> */}
     </>
   );
 };
