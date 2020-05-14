@@ -46,7 +46,7 @@ const CommunityPage = () => {
         <VerticalTimeline className={classes.timelineCustom}>
           {timelineData.map(data => (
             <TimeLineItem
-              key={`${data.org}/${data.contributor}/${data.date}`}
+              key={`${data.title}/${data.subtitle}/${data.date}`}
               {...data}
             />
           ))}

@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const TimeLineItem = ({ org, contributor, text, date }) => {
+const TimeLineItem = ({ title, subtitle, text, date }) => {
   const classes = useStyles();
 
   return (
@@ -29,23 +29,25 @@ const TimeLineItem = ({ org, contributor, text, date }) => {
       icon={<Code />}
     >
       <Typography variant="h6" className="vertical-timeline-element-title">
-        {org}
+        {title}
       </Typography>
       <Typography
         variant="subtitle1"
         className="vertical-timeline-element-subtitle"
       >
-        {contributor}
+        {subtitle}
       </Typography>
-      <Typography variant="body1">{text}</Typography>
+      <Typography component="pre" variant="body1" style={{ paddingTop: '1em' }}>
+        {text}
+      </Typography>
     </VerticalTimelineElement>
   );
 };
 
 TimeLineItem.propTypes = {
-  orgName: PropTypes.string,
-  contributor: PropTypes.string,
-  content: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  text: PropTypes.string,
   date: PropTypes.string,
 };
 
