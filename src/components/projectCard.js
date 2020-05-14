@@ -1,5 +1,4 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
 import {
   Grid,
   Card,
@@ -8,8 +7,9 @@ import {
   Button,
   Typography,
   CardActionArea,
-} from "@material-ui/core";
-import projectcard from "../images/projectbg.jpg";
+  makeStyles,
+} from '@material-ui/core';
+import projectcard from '../images/projectbg.jpg';
 
 const useStyles = makeStyles({
   root: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
   top: {
     backgroundImage: `url(${projectcard})`,
-    backgroundSize: "100 hidden",
+    backgroundSize: '100 hidden',
     padding: 20,
     height: 100,
   },
@@ -40,8 +40,8 @@ export default function ProjectCard(x) {
   const cardclasses = useStyles();
 
   return (
-    <Grid container direction="column" item lg={4} >
-      <Card className={cardclasses.root} >
+    <Grid container direction="column" item lg={4}>
+      <Card className={cardclasses.root}>
         <CardActionArea>
           <Grid
             container
@@ -49,9 +49,13 @@ export default function ProjectCard(x) {
             justify="center"
             alignItems="flex-start"
             className={cardclasses.top}
-            
           >
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              style={{ color: 'white' }}
+            >
               {x.Name}
             </Typography>
           </Grid>
@@ -63,41 +67,36 @@ export default function ProjectCard(x) {
               // alignItems="flex-start"
               // wrap="nowrap"
               spacing={1}
-              >
-                < Grid item >
-                  <Typography variant="body2" color="textSecondary" component="p" >
-                    Description: {x.Description} 
-                  </Typography>
-                </Grid>
-                < Grid item>
-                  <Typography variant="body2" color="textSecondary" component="p" >
-                    Tech Stack: {x.TechStack} 
-                  </Typography>
-                </Grid>
-                < Grid item>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    Students contributing to this project and their Github IDs: 
-                  </Typography>
-                </Grid>
-                < Grid item>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {x.StudentsContact}
-                  </Typography>
-                </Grid>
+            >
+              <Grid item>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Description: {x.Description}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Tech Stack: {x.TechStack}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Students contributing to this project and their Github IDs:
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {x.StudentsContact}
+                </Typography>
+              </Grid>
             </Grid>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Grid
-          container
-          direction="row"
-          justify="space-between"
-          >
-          <Button size="small" color="primary" href={x.Link}>
-            Learn More
-          </Button>
-          <Button size="small" color="primary" >
-          </Button>
+          <Grid container direction="row" justify="space-between">
+            <Button size="small" color="primary" href={x.Link}>
+              Learn More
+            </Button>
+            <Button size="small" color="primary"></Button>
           </Grid>
         </CardActions>
       </Card>

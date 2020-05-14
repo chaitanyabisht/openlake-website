@@ -56,8 +56,8 @@ export default function IndexPage() {
         >
           <Typography variant="h1">Open Lake</Typography>
 
-          <Typography paragraph >
-            Connecting Students to the World of Open Source Development.
+          <Typography paragraph>
+            Connecting Students to the World of Open Source Development
           </Typography>
         </div>
 
@@ -75,7 +75,7 @@ export default function IndexPage() {
               What is OpenLake
             </Typography>
 
-            <Typography paragraph  className="details">
+            <Typography paragraph className="details">
               As the world is moving towards a connected society. The
               communities driving the development of open source technologies
               are becoming more prominent. Numerous software giants like Google
@@ -92,18 +92,16 @@ export default function IndexPage() {
               corporate firms.
             </Typography>
 
-            <Typography paragraph  className="details">
+            <Typography paragraph className="details">
               With the importance of Open Source made crystal clear. There is
               one problem that needs to be addressed: Connecting people with
               Open Source Communities. The idea of OpenLake is to act as a
               bridge between Students and the World of Open Source Development.
             </Typography>
 
-            <br/>
+            <br />
 
-            <Typography variant="h5" >
-              Functioning
-            </Typography>
+            <Typography variant="h5">Functioning</Typography>
 
             <Typography paragraph className="details">
               This independent entity will be a place to have discussions on
@@ -121,12 +119,12 @@ export default function IndexPage() {
               to the organisations they are part of.
             </Typography>
 
-            <br/>
+            <br />
             <Typography variant="h5" gutterBottom>
               Structure
             </Typography>
 
-            <Typography paragraph  className="details">
+            <Typography paragraph className="details">
               There will be a set of individuals who will act as mentors and
               ensure that the events related to OpenLake happen periodically.
               Currently, individuals who have had their pull requests merged

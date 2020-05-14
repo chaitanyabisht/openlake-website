@@ -13,6 +13,7 @@ import {
 import ButtonLink from '../components/ButtonLink';
 import DarkModeToggle from './DarkModeToggle';
 import NavMenu from '../components/NavMenu';
+import HideOnScroll from './HideOnScroll';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,8 +32,8 @@ const Header = ({ siteTitle }) => {
   const classes = useStyles();
 
   return (
-    <header>
-      <AppBar position="static" color="inherit">
+    <HideOnScroll>
+      <AppBar position="fixed" color="inherit">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link to="/">{siteTitle}</Link>
@@ -49,7 +50,7 @@ const Header = ({ siteTitle }) => {
           </Hidden>
         </Toolbar>
       </AppBar>
-    </header>
+    </HideOnScroll>
   );
 };
 
