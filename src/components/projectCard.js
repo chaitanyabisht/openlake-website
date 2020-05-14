@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     backgroundImage: `url(${projectcard})`,
     backgroundSize: "100 hidden",
     padding: 20,
+    height: 100,
   },
   middle: {
     padding: 10,
@@ -44,8 +45,8 @@ export default function ProjectCard(x) {
         <CardActionArea>
           <Grid
             container
-            direction="row"
-            justify="flex-start"
+            direction="column"
+            justify="center"
             alignItems="flex-start"
             className={cardclasses.top}
             
@@ -75,12 +76,12 @@ export default function ProjectCard(x) {
                 </Grid>
                 < Grid item>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Wanna know more about the project? 
+                    Students contributing to this project and their Github IDs: 
                   </Typography>
                 </Grid>
                 < Grid item>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Contact: {x.StudentsContact}
+                    {x.StudentsContact}
                   </Typography>
                 </Grid>
             </Grid>
