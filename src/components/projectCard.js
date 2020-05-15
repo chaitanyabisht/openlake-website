@@ -9,8 +9,8 @@ import {
   CardActionArea,
   makeStyles,
 } from '@material-ui/core';
-import projectcard from '../images/projectbg.jpg';
-import './wave.css';
+// import projectcard from '../images/projectbg.jpg';
+
 
 const useStyles = makeStyles({
   root: {
@@ -25,12 +25,14 @@ const useStyles = makeStyles({
     fontSize: 14,
     width: 70,
   },
-  // top: {
-  //   // backgroundImage: `url(${projectcard})`,
-  //   backgroundSize: '100 hidden',
-  //   padding: 20,
-  //   height: 100, 
-  // },
+  top: {
+    // backgroundImage: `url(${projectcard})`,
+    backgroundSize: '100 hidden',
+    padding: 20,
+    height: 80, 
+    backgroundColor : "#00aeff", 
+    opacity: 0.7,
+  },
   middle: {
     padding: 10,
     height: 200,
@@ -49,8 +51,8 @@ export default function ProjectCard(x) {
             direction="column"
             justify="center"
             alignItems="flex-start"
-            // className={cardclasses.top}
-            className="top"
+            className={cardclasses.top}
+
           >
             <Typography
               gutterBottom

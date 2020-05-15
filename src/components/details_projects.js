@@ -8,7 +8,7 @@ const projects = [
     },
     {
         Name: "Haiku",
-        StudentsContact: "Yatendra, +13 18414 89174;",              
+        StudentsContact: "Yatendra, yatendra1999;",              
         Description: "An open-source operating system that specifically targets personal computing.",
         TechStack: " C, Shell, Rust, HTML, Go",
         Link: "https://github.com/haiku",        
