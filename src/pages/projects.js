@@ -5,7 +5,9 @@ import SEO from "../components/seo";
 import ProjectCard from "../components/projectCard";
 import projects from "../components/details_projects";
 import { Grid, Box, Typography, Container } from "@material-ui/core";
-import SimpleExpansionPanel from "../components/projectForms";
+// import SimpleExpansionPanel from "../components/projectForms";
+import projectbg from "../images/projectsbg.png";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles({
   root: {
@@ -16,8 +18,13 @@ const useStyles = makeStyles({
     marginBottom: 10,
   },
   titleGrid: {
+    backgroundImage: `url(${projectbg})`,
     height: 300,
-    padding: 40
+    padding: 40,
+    backgroundSize: 700,
+    backgroundRepeat: "no-repeat" ,
+    backgroundPosition: "right bottom",
+    overflow: 'hidden',
   },
   subTitle: {
     padding:5,
@@ -30,6 +37,7 @@ const useStyles = makeStyles({
 
 export default function Projects() {
   const classes = useStyles();
+  // const matches = useMediaQuery('(min-width:600px)');
 
   return (
     <Layout>
@@ -52,6 +60,10 @@ export default function Projects() {
               Connect. Contribute. Build.
             </Typography>
           </Box>
+          {/* <img
+          src={projectbg}
+          alt = "bg"
+          /> */}
         </Grid>
         <br/>
         {/* <Container>
