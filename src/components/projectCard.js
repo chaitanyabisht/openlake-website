@@ -8,8 +8,9 @@ import {
   Typography,
   CardActionArea,
   makeStyles,
+  Box,
 } from '@material-ui/core';
-// import projectcard from '../images/projectbg.jpg';
+import projectcard from '../images/projectcard2.png';
 
 
 const useStyles = makeStyles({
@@ -26,16 +27,21 @@ const useStyles = makeStyles({
     width: 70,
   },
   top: {
-    // backgroundImage: `url(${projectcard})`,
-    backgroundSize: '100 hidden',
+    backgroundColor : "#00aeff", 
+    opacity: 1,
+    backgroundRepeat: "no-repeat" ,
+    backgroundPosition: "right top",
+    overflow: 'hidden',
+    backgroundImage: `url(${projectcard})`,
+    backgroundSize: 500,
     padding: 20,
     height: 80, 
-    backgroundColor : "#00aeff", 
-    opacity: 0.7,
+    
   },
   middle: {
     padding: 10,
-    height: 200,
+    // height: 250,
+    flexGrow: 2,
   },
 });
 
@@ -74,17 +80,17 @@ export default function ProjectCard(x) {
             >
               <Grid item>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Description: {x.Description}
+                  <Box fontWeight="fontWeightMedium"> Description: </Box> {x.Description}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Tech Stack: {x.TechStack}
+                <Box fontWeight="fontWeightMedium">Tech Stack: </Box> {x.TechStack}
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Students contributing to this project and their Github IDs:
+                <Typography variant="body2" color="textSecondary" component="p" >
+                <Box fontWeight="fontWeightMedium">Students contributing to this project and their Github IDs: </Box>
                 </Typography>
               </Grid>
               <Grid item>
