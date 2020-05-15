@@ -106,7 +106,6 @@ export default function ProjectCard(x) {
             <Button size="small" color="primary" href={x.Link}>
               Learn More
             </Button>
-            <Button size="small" color="primary"></Button>
           </Grid>
         </CardActions>
       </Card>
