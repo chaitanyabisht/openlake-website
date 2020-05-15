@@ -8,8 +8,10 @@ import {
   Typography,
   CardActionArea,
   makeStyles,
+  Box,
 } from '@material-ui/core';
-import projectcard from '../images/projectbg.jpg';
+import projectcard from '../images/projectcard2.png';
+
 
 const useStyles = makeStyles({
   root: {
@@ -25,14 +27,21 @@ const useStyles = makeStyles({
     width: 70,
   },
   top: {
+    backgroundColor : "#1EA3D2", 
+    // opacity: 0.8,
+    backgroundRepeat: "no-repeat" ,
+    backgroundPosition: "right top",
+    overflow: 'hidden',
     backgroundImage: `url(${projectcard})`,
-    backgroundSize: '100 hidden',
+    backgroundSize: 500,
     padding: 20,
-    height: 100,
+    height: 80, 
+    
   },
   middle: {
     padding: 10,
-    height: 200,
+    height: 250,
+    // flexGrow: 2,
   },
 });
 
@@ -40,8 +49,8 @@ export default function ProjectCard(x) {
   const cardclasses = useStyles();
 
   return (
-    <Grid container direction="column" item lg={4}>
-      <Card className={cardclasses.root}>
+    <Grid container direction="column" item lg={4} key={x.Name}>
+      <Card className={cardclasses.root} >
         <CardActionArea>
           <Grid
             container
@@ -49,6 +58,7 @@ export default function ProjectCard(x) {
             justify="center"
             alignItems="flex-start"
             className={cardclasses.top}
+
           >
             <Typography
               gutterBottom
@@ -65,22 +75,22 @@ export default function ProjectCard(x) {
               direction="column"
               justify="flex-start"
               // alignItems="flex-start"
-              // wrap="nowrap"
+              wrap="nowrap"
               spacing={1}
             >
               <Grid item>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Description: {x.Description}
+                  <Box fontWeight="fontWeightMedium"> Description: </Box> {x.Description}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Tech Stack: {x.TechStack}
+                <Box fontWeight="fontWeightMedium">Tech Stack: </Box> {x.TechStack}
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Students contributing to this project and their Github IDs:
+                <Typography variant="body2" color="textSecondary" component="p" >
+                <Box fontWeight="fontWeightMedium">Students contributing to this project and their Github IDs: </Box>
                 </Typography>
               </Grid>
               <Grid item>
