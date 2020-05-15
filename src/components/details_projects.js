@@ -29,7 +29,7 @@ const projects = [
     },
     {
         Name: "Free Code Camp",
-        StudentsContact: "Ambar, supecoww;",
+        StudentsContact: "Ambar, supercoww;",
         Description: "Platform to learn to code for free with millions of other people around the world",
         TechStack: "JavaScript, CSS, HTML, Shell, R",
         Link: "https://github.com/freeCodeCamp/",        
