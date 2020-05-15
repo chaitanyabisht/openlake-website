@@ -27,8 +27,8 @@ const useStyles = makeStyles({
     width: 70,
   },
   top: {
-    backgroundColor : "#00aeff", 
-    opacity: 1,
+    backgroundColor : "#1EA3D2", 
+    // opacity: 0.8,
     backgroundRepeat: "no-repeat" ,
     backgroundPosition: "right top",
     overflow: 'hidden',
