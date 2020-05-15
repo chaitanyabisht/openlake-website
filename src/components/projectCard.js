@@ -40,8 +40,8 @@ const useStyles = makeStyles({
   },
   middle: {
     padding: 10,
-    // height: 250,
-    flexGrow: 2,
+    height: 250,
+    // flexGrow: 2,
   },
 });
 
@@ -49,8 +49,8 @@ export default function ProjectCard(x) {
   const cardclasses = useStyles();
 
   return (
-    <Grid container direction="column" item lg={4}>
-      <Card className={cardclasses.root}>
+    <Grid container direction="column" item lg={4} key={x.Name}>
+      <Card className={cardclasses.root} >
         <CardActionArea>
           <Grid
             container
