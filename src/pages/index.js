@@ -6,6 +6,10 @@ import SEO from '../components/seo';
 import { Container, Typography, Paper, makeStyles } from '@material-ui/core';
 // import heroBackground from '../images/cool-blue-background.svg';
 // import waterBackground from '../images/water.jpeg';
+import svgwaves from '../images/wave.svg';
+import svgwavesTop from '../images/wave-top.svg';
+import bubble from '../images/bubble.svg';
+import svgwavesNight from '../images/wave-night.svg';
 
 const useStyles = makeStyles({
   centerText: {
@@ -19,7 +23,19 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
+      <div
+        //  url(${svgwavesTop}),
+        style={{
+          backgroundImage: `
+        url(${svgwaves})
+        `,
+          // backgroundSize: "cover",
+          backgroundSize: 'auto',
+          backgroundPosition: '35% 35%',
+          backgroundAttachment: 'scroll',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         {/* 
           background:
             '-webkit-radial-gradient(rgb(163, 211, 254), rgb(0, 127, 254))',
@@ -41,17 +57,25 @@ export default function IndexPage() {
           <Typography variant="h1">Open Lake</Typography>
 
           <Typography paragraph>
-            Connecting Students to the World of Open Source Development.
+            Connecting Students to the World of Open Source Development
           </Typography>
         </div>
 
-        <Paper className={classes.centerText} elevation={0}>
+        <Paper
+          className={classes.centerText}
+          elevation={0}
+          style={{
+            background: '#0090dd',
+            color: '#ffffff',
+          }}
+        >
+          {/* #0090dd , #0067ab,#00426e*/}
           <Container maxWidth="lg" style={{ padding: '3rem' }}>
             <Typography variant="h4" gutterBottom>
               What is OpenLake
             </Typography>
 
-            <Typography paragraph>
+            <Typography paragraph className="details">
               As the world is moving towards a connected society. The
               communities driving the development of open source technologies
               are becoming more prominent. Numerous software giants like Google
@@ -68,11 +92,44 @@ export default function IndexPage() {
               corporate firms.
             </Typography>
 
-            <Typography paragraph>
+            <Typography paragraph className="details">
               With the importance of Open Source made crystal clear. There is
               one problem that needs to be addressed: Connecting people with
               Open Source Communities. The idea of OpenLake is to act as a
               bridge between Students and the World of Open Source Development.
+            </Typography>
+
+            <br />
+
+            <Typography variant="h5">Functioning</Typography>
+
+            <Typography paragraph className="details">
+              This independent entity will be a place to have discussions on
+              open source communities. The entity will encourage and help
+              students to become a part of open source initiatives like Google
+              Summer of Code, Outreachy etc.
+            </Typography>
+
+            <Typography paragraph className="details">
+              At a later stage, the students who have worked in open source
+              organisations may encourage other students to join them. Ensuring
+              a steady flow of human resources to these communities. There will
+              be fairs where students can talk about the work they did for the
+              FOSS (Free Open Source Software) communities and add more people
+              to the organisations they are part of.
+            </Typography>
+
+            <br />
+            <Typography variant="h5" gutterBottom>
+              Structure
+            </Typography>
+
+            <Typography paragraph className="details">
+              There will be a set of individuals who will act as mentors and
+              ensure that the events related to OpenLake happen periodically.
+              Currently, individuals who have had their pull requests merged
+              into reputed Open Source Organisation will be eligible to be
+              mentors.
             </Typography>
 
             <div style={{ display: 'flex', flexFlow: 'row nowrap' }}>

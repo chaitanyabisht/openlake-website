@@ -1,9 +1,14 @@
-- org: DBpedia
-  contributor: Kumar Shivendu
-  date: 2020
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Web Development
+  subtitle: OpenLake
+  text: |
+    Meghana Varanasi
+    Kumar Shivendu
+    Ambar Mutha
+  date: May 2020
 
-- org: DBpedia
-  contributor: Anand Panchbhai
-  date: 2019
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Mentors
+  text: |
+    Anand Panchbhai
+    Rachuri Sri Pramodh
+    Anees Ahmed
+    Yatendra Singh
