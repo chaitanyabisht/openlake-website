@@ -13,7 +13,7 @@ import {
 import projectcard from '../images/projectcard2.png';
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     minWidth: 50,
     margin: 20,
@@ -27,7 +27,11 @@ const useStyles = makeStyles({
     width: 70,
   },
   top: {
-    backgroundColor : "#1EA3D2", 
+    // backgroundColor : "#1EA3D2", 
+    backgroundColor: 
+        theme.palette.primary[
+          theme.palette.type === 'light' ? 'dark' : 'light'
+        ],
     // opacity: 0.8,
     backgroundRepeat: "no-repeat" ,
     backgroundPosition: "right top",
@@ -43,7 +47,7 @@ const useStyles = makeStyles({
     height: 250,
     // flexGrow: 2,
   },
-});
+}));
 
 export default function ProjectCard(x) {
   const cardclasses = useStyles();
@@ -79,19 +83,27 @@ export default function ProjectCard(x) {
               spacing={1}
             >
               <Grid item>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  <Box fontWeight="fontWeightMedium"> Description: </Box> {x.Description}
+              <Box >
+                <Typography variant="subtitle2" color="textSecondary" component="p">
+                   Description:
                 </Typography>
+              </Box> 
+              <Typography variant="body2" color="textSecondary" component="p">{x.Description}</Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" color="textSecondary" component="p">
-                <Box fontWeight="fontWeightMedium">Tech Stack: </Box> {x.TechStack}
-                </Typography>
+                <Box fontWeight="fontWeightMedium">
+                  <Typography variant="subtitle2" color="textSecondary" component="p">
+                    Tech Stack:
+                  </Typography>
+                </Box> 
+                <Typography variant="body2" color="textSecondary" component="p">{x.TechStack}</Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" color="textSecondary" component="p" >
-                <Box fontWeight="fontWeightMedium">Students contributing to this project and their Github IDs: </Box>
+              <Box fontWeight="fontWeightMedium">
+                <Typography variant="subtitle2" color="textSecondary" component="p" >
+                  Students contributing to this project and their Github IDs: 
                 </Typography>
+              </Box>
               </Grid>
               <Grid item>
                 <Typography variant="body2" color="textSecondary" component="p">
