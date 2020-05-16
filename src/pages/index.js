@@ -54,6 +54,7 @@ export default function IndexPage() {
           style={{
             position: 'relative',
             zIndex: 5,
+            textAlign: "justify"
           }}
         >
           {/* #0090dd , #0067ab,#00426e*/}
