@@ -55,7 +55,6 @@ export default function ProjectCard(x) {
   return (
     <Grid container direction="column" item lg={4} key={x.Name}>
       <Card className={cardclasses.root} >
-        <CardActionArea>
           <Grid
             container
             direction="column"
@@ -112,13 +111,12 @@ export default function ProjectCard(x) {
               </Grid>
             </Grid>
           </CardContent>
-        </CardActionArea>
+
         <CardActions>
           <Grid container direction="row" justify="space-between">
             <Button size="small" color="primary" href={x.Link}>
               Learn More
             </Button>
-            <Button size="small" color="primary"></Button>
           </Grid>
         </CardActions>
       </Card>

@@ -1,21 +1,29 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import { Container, Typography, Paper, makeStyles } from '@material-ui/core';
-// import heroBackground from '../images/cool-blue-background.svg';
-// import waterBackground from '../images/water.jpeg';
-import svgwaves from '../images/wave.svg';
-import svgwavesTop from '../images/wave-top.svg';
-import bubble from '../images/bubble.svg';
-import svgwavesNight from '../images/wave-night.svg';
+import Waves from '../images/wave.svg';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   centerText: {
     textAlign: 'center',
   },
-});
+  svgWave: {
+    position: 'relative',
+    top: 20,
+    '& path': {
+      fill:
+        theme.palette.primary[
+          theme.palette.type === 'light' ? 'dark' : 'light'
+        ],
+    },
+  },
+  primaryBg: {
+    backgroundColor:
+      theme.palette.primary[theme.palette.type === 'light' ? 'dark' : 'light'],
+    color: theme.palette.background.default,
+  },
+}));
 
 export default function IndexPage() {
   const classes = useStyles();
@@ -23,33 +31,10 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <div
-        //  url(${svgwavesTop}),
-        style={{
-          backgroundImage: `
-        url(${svgwaves})
-        `,
-          // backgroundSize: "cover",
-          backgroundSize: 'auto',
-          backgroundPosition: '35% 35%',
-          backgroundAttachment: 'scroll',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* 
-          background:
-            '-webkit-radial-gradient(rgb(163, 211, 254), rgb(0, 127, 254))',
-          background: 'radial-gradient(rgb(163, 211, 254), rgb(0, 127, 254))',
-           */}
-        {/* Bottom to top (white to blue)
-         background: "-webkit-linear-gradient(1deg, rgb(163, 211, 254), rgb(0, 127, 254))",
-        background: "linear-gradient(1deg, rgb(163, 211, 254), rgb(0, 127, 254))" */}
-        {/*style={{backgroundImage : `url(${waterBackground})`, backgroundRepeat : "no-repeat", }}
-         */}
+      <div>
         <div
           className={classes.centerText}
           style={{
-            height: '500px',
             boxSizing: 'border-box',
             padding: '50px',
           }}
@@ -61,13 +46,14 @@ export default function IndexPage() {
           </Typography>
         </div>
 
+        <Waves className={classes.svgWave} />
+
         <Paper
-          className={`${classes.primaryBg}`}
+          className={`${classes.centerText} ${classes.primaryBg}`}
           elevation={0}
           style={{
             position: 'relative',
             zIndex: 5,
-            textAlign: "justify"
           }}
         >
           {/* #0090dd , #0067ab,#00426e*/}
@@ -132,14 +118,6 @@ export default function IndexPage() {
               into reputed Open Source Organisation will be eligible to be
               mentors.
             </Typography>
-
-            <div style={{ display: 'flex', flexFlow: 'row nowrap' }}>
-              {/* <Typography paragraph>
-            
-          </Typography> */}
-              {/* 
-          <Typography paragraph></Typography> */}
-            </div>
           </Container>
         </Paper>
 
