@@ -62,11 +62,12 @@ export default function IndexPage() {
         </div>
 
         <Paper
-          className={classes.centerText}
+          className={`${classes.primaryBg}`}
           elevation={0}
           style={{
-            background: '#0090dd',
-            color: '#ffffff',
+            position: 'relative',
+            zIndex: 5,
+            textAlign: "justify"
           }}
         >
           {/* #0090dd , #0067ab,#00426e*/}
