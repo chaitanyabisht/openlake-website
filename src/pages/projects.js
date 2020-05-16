@@ -7,18 +7,23 @@ import projects from "../components/details_projects";
 import { Grid, Box, Typography, Container } from "@material-ui/core";
 // import SimpleExpansionPanel from "../components/projectForms";
 import projectbg from "../images/projectsbg.png";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import projectbgLight from "../images/projectsbgLight.png"
+// import { DarkBlue, White  } from '../components/colors';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     margin: 0,
   },
   title: {
     padding: 5,
     marginBottom: 10,
+    // color: [
+    //       theme.palette.type === 'light' ? '#04588E' : {White}
+    //     ],
   },
   titleGrid: {
-    backgroundImage: `url(${projectbg})`,
+    backgroundImage:  [
+        theme.palette.type === 'light' ? `url(${projectbgLight})` : `url(${projectbg})` ],
     height: 300,
     padding: 40,
     backgroundSize: 700,
@@ -29,11 +34,13 @@ const useStyles = makeStyles({
   subTitle: {
     padding:5,
     marginBottom: 10,
+  //   color: 
+  //         theme.palette.type === 'light' ? '#04588E' : {White}
   },
   form: {
     padding: 30,
   },
-});
+}));
 
 export default function Projects() {
   const classes = useStyles();

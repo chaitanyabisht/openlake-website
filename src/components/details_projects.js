@@ -29,10 +29,17 @@ const projects = [
     },
     {
         Name: "Free Code Camp",
-        StudentsContact: "Ambar, supercoww;",
+        StudentsContact: "Ambar, supecoww;",
         Description: "Platform to learn to code for free with millions of other people around the world",
         TechStack: "JavaScript, CSS, HTML, Shell, R",
         Link: "https://github.com/freeCodeCamp/",        
+    },
+    {
+        Name: "IBM/EVOTE",
+        StudentsContact:"Pratik Sanjay Patil, pratikpatil024",
+        Description: "A voting application that leverages Hyperledger Fabric and the IBM Blockchain Platform to record and tally ballots.",
+        TechStack: "NODE.JS, VUE.JS, Blockchain Platform: Hyperledger Fabric",
+        Link:"https://github.com/IBM/evote",
     },
 ];
 
