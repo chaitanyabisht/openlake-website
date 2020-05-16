@@ -49,7 +49,7 @@ export default function IndexPage() {
         <Waves className={classes.svgWave} />
 
         <Paper
-          className={`${classes.centerText} ${classes.primaryBg}`}
+          className={`${classes.primaryBg}`}
           elevation={0}
           style={{
             position: 'relative',
