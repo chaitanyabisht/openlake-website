@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     '& path': {
       fill:
         theme.palette.primary[
-          theme.palette.type === 'light' ? 'dark' : 'light'
+        theme.palette.type === 'light' ? 'dark' : 'light'
         ],
     },
   },
@@ -39,10 +39,10 @@ export default function IndexPage() {
             padding: '50px',
           }}
         >
-          <Typography variant="h1">Open Lake</Typography>
+          <Typography variant="h1">OpenLake</Typography>
 
           <Typography paragraph>
-            Connecting Students to the World of Open Source Development
+            Promoting Students' use of FOSS and contributing to Open Source
           </Typography>
         </div>
 
