@@ -42,7 +42,7 @@ export default function IndexPage() {
           <Typography variant="h1">OpenLake</Typography>
 
           <Typography paragraph>
-            Promoting Students' use of FOSS and contributing to Open Source
+            Connecting Students to the World of Open Source Development
           </Typography>
         </div>
 
