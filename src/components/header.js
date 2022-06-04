@@ -14,6 +14,7 @@ import ButtonLink from '../components/ButtonLink';
 import DarkModeToggle from './DarkModeToggle';
 import NavMenu from '../components/NavMenu';
 import HideOnScroll from './HideOnScroll';
+import Logo from '../images/logo.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,7 +27,15 @@ const useStyles = makeStyles(theme => ({
   list: {
     width: 250,
   },
+  logo: {
+    maxWidth: 50,
+    flexGrow: 1,
+  },
+  buttons : {
+    marginLeft: 'auto',
+  }
 }));
+
 
 const Header = ({ siteTitle }) => {
   const classes = useStyles();
@@ -35,12 +44,11 @@ const Header = ({ siteTitle }) => {
     <HideOnScroll>
       <AppBar position="fixed" color="inherit">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            <Link to="/">{siteTitle}</Link>
-          </Typography>
-
-          <DarkModeToggle />
-          <Hidden smDown implementation="css">
+          <Link to='/'>
+            <img src={Logo} alt="OpenLake Logo" className={classes.logo} />
+          </Link>
+          <Hidden smDown implementation="css" className={classes.buttons}>
+            {/* <DarkModeToggle /> */}
             <ButtonLink to="/">Home</ButtonLink>
             <ButtonLink to="/projects">projects</ButtonLink>
             <ButtonLink to="/community">community</ButtonLink>

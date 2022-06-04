@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Container, Typography, Paper, makeStyles } from '@material-ui/core';
+import { Container, Typography, Paper, makeStyles, Grid } from '@material-ui/core';
 import Waves from '../images/wave.svg';
+import Logo from '../images/logo-no-text.png';
 
 const useStyles = makeStyles(theme => ({
   centerText: {
@@ -23,6 +24,10 @@ const useStyles = makeStyles(theme => ({
       theme.palette.primary[theme.palette.type === 'light' ? 'dark' : 'light'],
     color: theme.palette.background.default,
   },
+  logo: {
+    align: 'center',
+  }
+
 }));
 
 export default function IndexPage() {
@@ -39,8 +44,14 @@ export default function IndexPage() {
             padding: '50px',
           }}
         >
-          <Typography variant="h1">OpenLake</Typography>
-
+          <Grid container direction="row" alignItems="center" justify='center'>
+          <Grid item>
+            <img src={Logo} alt="OpenLake Logo" className={classes.logo} />
+          </Grid>
+          <Grid item>
+            <Typography variant="h1">OpenLake</Typography>
+          </Grid>
+          </Grid>
           <Typography paragraph>
             Connecting Students to the World of Open Source Development
           </Typography>
