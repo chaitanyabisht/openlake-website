@@ -48,7 +48,7 @@ const Header = ({ siteTitle }) => {
             <img src={Logo} alt="OpenLake Logo" className={classes.logo} />
           </Link>
           <Hidden smDown implementation="css" className={classes.buttons}>
-            {/* <DarkModeToggle /> */}
+            <DarkModeToggle />
             <ButtonLink to="/">Home</ButtonLink>
             <ButtonLink to="/projects">projects</ButtonLink>
             <ButtonLink to="/community">community</ButtonLink>
